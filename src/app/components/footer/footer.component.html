@@ -32,9 +32,13 @@
       </div>
     </div>
     <div class="topSection">
-      <span> {{ 'common.footer.trademark' | translate }} </span>
-      <span></span>
-      <span></span>
+      <span> {{ 'footer.copyright' | translate }} </span>
+      <span> {{ 'footer.termsOfService' | translate }} </span>
+      <span> {{ 'footer.cookies' | translate }} </span>
     </div>
+    <select name="lang" [ngModel]="lang$.getValue()" (ngModelChange)="changeLang($event)">
+      <option value="en"> {{ 'footer.lang.en' | translate }}</option>
+      <option value="el"> {{ 'footer.lang.el' | translate }}</option>
+    </select>
   }
 </div>
