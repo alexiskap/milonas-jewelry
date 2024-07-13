@@ -1,0 +1,48 @@
+@import "../../styles/mds";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18rem 25rem 12rem;
+
+  .leftPanel, .rightPanel {
+    display: flex;
+    align-items: flex-end;
+    gap: 40rem;
+    margin-bottom: 12rem;
+    flex: 1 1 100%;
+  }
+
+  .rightPanel {
+    justify-content: flex-end;
+  }
+
+  .middlePanel {
+    display: flex;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    white-space: nowrap;
+    color: $t-black;
+
+    span {
+      font-family: "Syne", sans-serif;
+      font-size: 16rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .icon {
+      font-size: 12rem;
+      opacity: 0.4;
+    }
+  }
+
+  .img-item {
+    height: 70rem;
+  }
+}

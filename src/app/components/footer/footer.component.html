@@ -1,0 +1,40 @@
+<div class="footer">
+  @if ((deviceType$ | async) === DeviceType.mobile) {
+    <button>Menu</button>
+  } @else {
+    <div class="topSection">
+      <div class="leftPanel">
+        @for (item of HeadersData.rightPanel; track item.id) {
+          @if (item.img) {
+            <img class="img-item" [src]="item.img" [alt]="item.caption">
+          } @else {
+            <a class="item" [routerLink]="item.id">{{ item.caption }}</a>
+          }
+        }
+      </div>
+      <div class="middlePanel">
+        @for (item of HeadersData.middlePanel; track item.id) {
+          @if (item.img) {
+            <img class="img-item" [src]="item.img" [alt]="item.caption">
+          } @else {
+            <a class="item" [routerLink]="item.id">{{ item.caption }}</a>
+          }
+        }
+      </div>
+      <div class="rightPanel">
+        @for (item of HeadersData.leftPanel; track item.id) {
+          @if (item.img) {
+            <img class="img-item" [src]="item.img" [alt]="item.caption">
+          } @else {
+            <a class="item" [routerLink]="item.id">{{ item.caption }}</a>
+          }
+        }
+      </div>
+    </div>
+    <div class="topSection">
+      <span> {{ 'common.footer.trademark' | translate }} </span>
+      <span></span>
+      <span></span>
+    </div>
+  }
+</div>
