@@ -1,0 +1,50 @@
+@import "../../../styles/mds";
+
+.footerItem {
+  display: flex;
+
+  .item {
+    font-family: "Syne", sans-serif;
+    font-size: 18rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0 4rem;
+    white-space: nowrap;
+    opacity: 0.85;
+    color: $t-black;
+    gap: 8rem;
+    @include textHoverUnderline();
+  }
+
+  .img-item {
+    height: 70rem;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    opacity: 0.85;
+    color: $t-black;
+    border: 1px solid transparentize($t-black, 1);
+    aspect-ratio: 1;
+
+    &:active, &:hover {
+      color: $t-black;
+
+      border: 1px solid transparentize($t-black, 0);
+    }
+
+    i {
+      font-size: 20rem;
+
+      &.fa-instagram {
+        font-size: 23rem;
+      }
+    }
+  }
+
+}

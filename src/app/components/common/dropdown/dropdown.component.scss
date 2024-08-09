@@ -1,0 +1,40 @@
+@import "../../../styles/mds";
+
+.dropdown {
+  font-size: 12rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-transform: capitalize;
+  gap: 8rem;
+
+  .active {
+    font-weight: 500;
+    position: relative;
+    padding: 4rem;
+    @include textHoverUnderline();
+
+    .optionsContainer {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 8rem;
+
+      .option {
+        font-weight: 400;
+        padding: 6rem;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .icon.open {
+    transform: rotate(180deg);
+  }
+}

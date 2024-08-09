@@ -1,0 +1,40 @@
+@import "../../../styles/mds";
+
+$t-red: hsla(0 100% 50% / 1);
+$t-blue: hsla(210 100% 50% / 1);
+
+.languageDropdown {
+  display: flex;
+  align-items: center;
+  height: 16rem;
+  padding: 4rem 12rem;
+  cursor: pointer;
+  border: 1px solid $t-black;
+  border-radius: 48rem;
+  gap: 8rem;
+
+  .icon {
+    font-size: 12rem;
+
+    &.en {
+      color: $t-red
+    }
+
+    &.el {
+      color: $t-blue
+    }
+  }
+
+  .container {
+    position: relative;
+    width: 80rem;
+    height: inherit;
+
+    .lang {
+      font-size: 14rem;
+      position: absolute;
+      width: inherit;
+      text-align: center;
+    }
+  }
+}

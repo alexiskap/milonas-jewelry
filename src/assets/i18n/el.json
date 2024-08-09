@@ -1,7 +1,13 @@
 {
+  "navigation": {
+    "collections": "συλλογες",
+    "categories": "κατηγοριες",
+    "aboutUs": "ποιοι ειμαστε",
+    "contact": "επικοινωνία",
+    "terms": "οροι χρησης"
+  },
   "footer": {
     "copyright": "milonas ©2023",
-    "termsOfService": "όροι χρήσης",
     "cookies": "cookies",
     "lang": {
       "en": "αγγλικά",

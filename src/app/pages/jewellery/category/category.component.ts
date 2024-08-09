@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-category',
+  selector: "app-category",
   standalone: true,
   imports: [],
-  templateUrl: './category.component.html',
-  styleUrl: './category.component.scss'
+  templateUrl: "./category.component.html",
+  styleUrl: "./category.component.scss",
 })
-export class CategoryComponent {
-
-}
+export class CategoryComponent {}

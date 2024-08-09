@@ -1,20 +1,22 @@
-import {Injectable} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
-import {BehaviorSubject} from 'rxjs';
+import { Injectable } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
+import { BehaviorSubject } from "rxjs";
 
-export type lang = 'en' | 'el';
+export enum Language {
+  en = "en",
+  el = "el",
+}
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class LangService {
-
-  lang$: BehaviorSubject<lang> = new BehaviorSubject<lang>('el');
+  lang$: BehaviorSubject<Language> = new BehaviorSubject<Language>(Language.el);
 
   constructor(public translate: TranslateService) {}
 
-  public updateLang(lang: lang): void {
+  public updateLang(lang: Language): void {
     this.lang$.next(lang);
-    this.translate.use(lang.match(/en|el/) ? lang : 'el');
+    this.translate.use(lang.match(/en|el/) ? lang : Language.el);
   }
 }

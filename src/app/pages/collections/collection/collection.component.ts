@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-collection',
+  selector: "app-collection",
   standalone: true,
   imports: [],
-  templateUrl: './collection.component.html',
-  styleUrl: './collection.component.scss'
+  templateUrl: "./collection.component.html",
+  styleUrl: "./collection.component.scss",
 })
-export class CollectionComponent {
-
-}
+export class CollectionComponent {}

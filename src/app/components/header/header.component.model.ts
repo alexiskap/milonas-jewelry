@@ -1,12 +1,7 @@
-export interface Header {
-  leftPanel: HeaderItem[];
-  middlePanel: HeaderItem[];
-  rightPanel: HeaderItem[];
-}
+import { NavigationItem } from "../../data/navigation/navigation.model";
 
-export interface HeaderItem {
-  id: string,
-  caption: string,
-  img: string,
-  isDropdown: boolean
+export interface Header {
+  leftPanel: NavigationItem[];
+  middlePanel: NavigationItem[];
+  rightPanel: NavigationItem[];
 }

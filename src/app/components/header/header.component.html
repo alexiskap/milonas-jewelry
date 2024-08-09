@@ -1,47 +1,24 @@
 <div class="header">
-  @if ((deviceType$ | async) === DeviceType.mobile) {
-    <button>Menu</button>
-  } @else {
-    <div class="leftPanel">
+  <div [class.mobile]="!isDesktop" class="leftPanel">
+    @if (isDesktop) {
       @for (item of HeadersData.leftPanel; track item.id) {
-        @if (item.img) {
-          <img class="img-item" [src]="item.img" [alt]="item.caption">
-        } @else {
-          <a class="item" [routerLink]="item.id">
-            <span> {{ item.caption }}</span>
-            @if (item.isDropdown) {
-              <i class="icon fa-sharp fa-solid fa-plus"></i>
-            }
-          </a>
-        }
+        <app-header-item [item]="item"></app-header-item>
       }
-    </div>
-    <div class="middlePanel">
-      @for (item of HeadersData.middlePanel; track item.id) {
-        @if (item.img) {
-          <img class="img-item" [src]="item.img" [alt]="item.caption">
-        } @else {
-          <a class="item" [routerLink]="item.id">
-            <span> {{ item.caption }}</span>
-            @if (item.isDropdown) {
-              <i class="icon fa-sharp fa-solid fa-plus"></i>
-            }
-          </a>
-        }
-      }
-    </div>
-    <div class="rightPanel">
+    }
+  </div>
+  <div [class.mobile]="!isDesktop" class="middlePanel">
+    @for (item of HeadersData.middlePanel; track item.id) {
+      <app-header-item [item]="item"></app-header-item>
+    }
+  </div>
+  <div [class.mobile]="!isDesktop" class="rightPanel">
+    @if (isDesktop) {
       @for (item of HeadersData.rightPanel; track item.id) {
-        @if (item.img) {
-          <img class="img-item" [src]="item.img" [alt]="item.caption">
-        } @else {
-          <a class="item" [routerLink]="item.id">
-            <span> {{ item.caption }}</span>
-            @if (item.isDropdown) {
-              <i class="icon fa-sharp fa-solid fa-plus"></i>
-            }
-          </a>
-        }
-      }</div>
-  }
+        <app-header-item [item]="item"></app-header-item>
+      }
+    } @else {
+      <app-side-menu [items]="SideMenuData"></app-side-menu>
+    }
+  </div>
+  <!--  }-->
 </div>

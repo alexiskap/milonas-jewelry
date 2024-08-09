@@ -1,0 +1,35 @@
+@import "../../../styles/mds";
+
+.headerItem {
+  display: flex;
+  max-height: 100%;
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    white-space: nowrap;
+    color: $t-black;
+    gap: 8rem;
+    @include textHoverUnderline();
+
+    &:hover {
+      .icon {
+        transform: rotate(180deg);
+        opacity: 1;
+      }
+    }
+
+    span {
+      font-size: 16rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .icon {
+      font-size: 12rem;
+      opacity: 0.4;
+    }
+  }
+}

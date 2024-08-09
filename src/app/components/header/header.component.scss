@@ -8,41 +8,29 @@
   .leftPanel, .rightPanel {
     display: flex;
     align-items: flex-end;
-    gap: 40rem;
-    margin-bottom: 12rem;
     flex: 1 1 100%;
+    margin-bottom: 12rem;
+    gap: 40rem;
+
+    &.mobile {
+      margin-bottom: 0;
+    }
   }
 
   .rightPanel {
     justify-content: flex-end;
+
+    &.mobile {
+      align-items: center;
+    }
   }
 
   .middlePanel {
     display: flex;
-  }
-
-  .item {
-    display: flex;
-    align-items: center;
-    gap: 8rem;
-    white-space: nowrap;
-    color: $t-black;
-
-    span {
-      font-family: "Syne", sans-serif;
-      font-size: 16rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      opacity: 0.85;
-    }
-
-    .icon {
-      font-size: 12rem;
-      opacity: 0.4;
-    }
-  }
-
-  .img-item {
     height: 70rem;
+
+    &.mobile {
+      height: 34rem;
+    }
   }
 }

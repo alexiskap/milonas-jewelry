@@ -1,24 +1,25 @@
 @import "styles/mds";
 
 :host {
+  font-size: 16rem;
   display: flex;
-  flex-direction: column;
+  overflow: hidden;
   flex: 0 0 100%;
+  flex-direction: column;
   width: 100dvw;
   height: 100dvh;
-  overflow: hidden;
-  font-size: 16rem;
-  //background: linear-gradient(315deg, $gold, $gold-light);
-  //background: radial-gradient($gold-light, transparent);
-  //background-position-x: calc(var(--pointer-position-X) * -50);
-  //background-position-y: calc(var(--pointer-position-Y) * -50);
-  //background-repeat: no-repeat;
 }
 
 .view {
   display: flex;
-  flex-direction: column;
-  flex: 1 1 0;
   overflow-y: auto;
+  flex: 1 1 0;
+  flex-direction: column;
   padding: 32rem;
+}
+
+.content {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
 }

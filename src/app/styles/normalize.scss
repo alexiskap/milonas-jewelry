@@ -1,13 +1,38 @@
+@import "mds";
+
 html {
+  font-family: "Syne", sans-serif;
   font-size: 1px;
 
   body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
+
+    &, &:hover, &:focus, &:active {
+      color: currentColor;
+    }
+  }
+}
+
+@supports (scrollbar-color: auto) {
+  * {
+    scrollbar-color: transparentize($t-black, 0.4) white;
+    scrollbar-width: thin;
+  }
+}
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+  *::-webkit-scrollbar {
+    background: white;
+    width: 8rem;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: transparentize($t-black, 0.4);
   }
 }

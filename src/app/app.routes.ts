@@ -1,57 +1,57 @@
-import {Routes} from '@angular/router';
-import {AboutsUsComponent} from './pages/abouts-us/abouts-us.component';
-import {CollectionComponent} from './pages/collections/collection/collection.component';
-import {CollectionsComponent} from './pages/collections/collections.component';
-import {ContactUsComponent} from './pages/contact-us/contact-us.component';
-import {CategoryComponent} from './pages/jewellery/category/category.component';
-import {JewelComponent} from './pages/jewellery/jewel/jewel.component';
-import {JewelleryComponent} from './pages/jewellery/jewellery.component';
-import {LandingComponent} from './pages/landing/landing.component';
+import { Routes } from "@angular/router";
+import { AboutsUsComponent } from "./pages/abouts-us/abouts-us.component";
+import { CollectionComponent } from "./pages/collections/collection/collection.component";
+import { CollectionsComponent } from "./pages/collections/collections.component";
+import { ContactUsComponent } from "./pages/contact-us/contact-us.component";
+import { CategoryComponent } from "./pages/jewellery/category/category.component";
+import { JewelComponent } from "./pages/jewellery/jewel/jewel.component";
+import { JewelleryComponent } from "./pages/jewellery/jewellery.component";
+import { LandingComponent } from "./pages/landing/landing.component";
 
 export const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: LandingComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'about-us',
+    path: "about-us",
     component: AboutsUsComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'contact-us',
+    path: "contact-us",
     component: ContactUsComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'collections',
+    path: "collections",
     component: CollectionsComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'collections/:collection',
+    path: "collections/:collection",
     component: CollectionComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'jewellery',
+    path: "collections/:collection/:jewel",
+    component: JewelComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "jewels",
     component: JewelleryComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'jewellery/:category',
+    path: "jewels/:category",
     component: CategoryComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
   {
-    path: 'collections/:collection/:jewel',
+    path: "jewellery/:category/:jewel",
     component: JewelComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'jewellery/:category/:jewel',
-    component: JewelComponent,
-    pathMatch: 'full',
+    pathMatch: "full",
   },
 ];
