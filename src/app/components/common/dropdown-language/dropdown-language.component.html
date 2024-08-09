@@ -1,0 +1,10 @@
+<div (click)="changeSelected()" class="languageDropdown">
+  <i class="icon fa-regular fa-flag {{lang$.getValue()}}"></i>
+  <div class="container">
+    @for (lang of languageOptions; track lang.id) {
+      @if (lang.id === selectedLanguage$.getValue()?.id) {
+        <div class="lang"> {{ lang.caption | translate }}</div>
+      }
+    }
+  </div>
+</div>

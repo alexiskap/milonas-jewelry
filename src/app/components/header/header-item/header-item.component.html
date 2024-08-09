@@ -1,0 +1,14 @@
+@if (item) {
+  <div class="headerItem">
+    @if (item.image) {
+      <img [src]="item.image.url" [alt]="item.image.alt" [routerLink]="item.image.relativePath">
+    } @else if (item.text) {
+      <a class="item" [routerLink]="item.text.relativePath">
+        <span> {{ item.text.caption | translate }}</span>
+        @if (item.text.isDropdown) {
+          <i class="icon fa-sharp fa-solid fa-plus"></i>
+        }
+      </a>
+    }
+  </div>
+}

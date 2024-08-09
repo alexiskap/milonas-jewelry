@@ -1,0 +1,14 @@
+<div (click)="toggleDropdown()" [class.open]="isOpen" class="dropdown">
+  <div class="active">{{ (selected ? selected.caption : '') | translate }}
+    @if (isOpen) {
+      <div class="optionsContainer">
+        @for (option of options; track option.id) {
+          @if (option.id !== selected?.id) {
+            <div class="option" (click)="changeSelected(option.id)">{{ option.caption | translate }}</div>
+          }
+        }
+      </div>
+    }
+  </div>
+  <i [class.open]="isOpen" class="icon fa-sharp fa-solid fa-angle-down"></i>
+</div>

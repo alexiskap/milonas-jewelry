@@ -1,7 +1,13 @@
 {
+  "navigation": {
+    "collections": "collections",
+    "categories": "categories",
+    "aboutUs": "about us",
+    "contact": "contact",
+    "terms": "terms of service"
+  },
   "footer": {
     "copyright": "milonas ©2023",
-    "termsOfService": "terms of service",
     "cookies": "cookies",
     "lang": {
       "en": "english",

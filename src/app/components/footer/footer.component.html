@@ -4,41 +4,37 @@
   } @else {
     <div class="topSection">
       <div class="leftPanel">
-        @for (item of HeadersData.rightPanel; track item.id) {
-          @if (item.img) {
-            <img class="img-item" [src]="item.img" [alt]="item.caption">
-          } @else {
-            <a class="item" [routerLink]="item.id">{{ item.caption }}</a>
-          }
+        @for (item of FooterData.rightPanel; track item.id) {
+          <app-footer-item [item]="item"></app-footer-item>
         }
+        <div class="social">
+          @for (item of FooterData.social; track item.id) {
+            <app-footer-item [item]="item"></app-footer-item>
+          }
+        </div>
       </div>
       <div class="middlePanel">
-        @for (item of HeadersData.middlePanel; track item.id) {
-          @if (item.img) {
-            <img class="img-item" [src]="item.img" [alt]="item.caption">
-          } @else {
-            <a class="item" [routerLink]="item.id">{{ item.caption }}</a>
-          }
+        @for (item of FooterData.middlePanel; track item.id) {
+          <app-footer-item [item]="item"></app-footer-item>
         }
       </div>
       <div class="rightPanel">
-        @for (item of HeadersData.leftPanel; track item.id) {
-          @if (item.img) {
-            <img class="img-item" [src]="item.img" [alt]="item.caption">
-          } @else {
-            <a class="item" [routerLink]="item.id">{{ item.caption }}</a>
-          }
+        @for (item of FooterData.leftPanel; track item.id) {
+          <app-footer-item [item]="item"></app-footer-item>
         }
       </div>
     </div>
-    <div class="topSection">
-      <span> {{ 'footer.copyright' | translate }} </span>
-      <span> {{ 'footer.termsOfService' | translate }} </span>
-      <span> {{ 'footer.cookies' | translate }} </span>
+    <div class="bottomSection">
+      <div class="leftPanel">
+        <span> {{ 'footer.copyright' | translate }} </span>
+      </div>
+      <div class="middlePanel">
+        <a [routerLink]="navigationItems.terms.text.relativePath"> {{ navigationItems.terms.text.caption | translate }}</a>
+        <span> {{ 'footer.cookies' | translate }} </span>
+      </div>
+      <div class="rightPanel">
+        <cm-dropdown-language></cm-dropdown-language>
+      </div>
     </div>
-    <select name="lang" [ngModel]="lang$.getValue()" (ngModelChange)="changeLang($event)">
-      <option value="en"> {{ 'footer.lang.en' | translate }}</option>
-      <option value="el"> {{ 'footer.lang.el' | translate }}</option>
-    </select>
   }
 </div>

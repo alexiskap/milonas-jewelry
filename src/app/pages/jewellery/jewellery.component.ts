@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-jewellery',
+  selector: "app-jewellery",
   standalone: true,
   imports: [],
-  templateUrl: './jewellery.component.html',
-  styleUrl: './jewellery.component.scss'
+  templateUrl: "./jewellery.component.html",
+  styleUrl: "./jewellery.component.scss",
 })
-export class JewelleryComponent {
-
-}
+export class JewelleryComponent {}

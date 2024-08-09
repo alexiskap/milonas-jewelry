@@ -1,0 +1,38 @@
+<div class="sideMenu">
+  <button (click)="toggleSideMenu()" [class.open]="isOpen" class="menuButton">
+    <i></i>
+    <i></i>
+    <i></i>
+  </button>
+  <div [class.open]="isOpen" class="container">
+    <div class="section">
+      @for (item of sideMenuData.topPanel; track item.id) {
+        @if (item.text) {
+          <a class="item" [routerLink]="item.text.relativePath">{{ item.text.caption | translate }}</a>
+        }
+      }
+    </div>
+    <div class="section">
+      @for (item of sideMenuData.middlePanel; track item.id) {
+        @if (item.text) {
+          <a class="item" [routerLink]="item.text.relativePath">{{ item.text.caption | translate }}</a>
+        }
+      }
+    </div>
+    <div class="section social">
+      @for (item of sideMenuData.bottomPanel; track item.id) {
+        @if (item.icon) {
+          <a class="icon" [href]="item.icon.url" target="_blank">
+            <i class="{{item.icon.className}}"></i>
+          </a>
+        }
+      }
+    </div>
+    <div class="section bottom">
+      <a [routerLink]="navigationItems.terms.text.relativePath"> {{ navigationItems.terms.text.caption | translate }}</a>
+      <span> {{ 'footer.cookies' | translate }} </span>
+      <cm-dropdown-language></cm-dropdown-language>
+      <span> {{ 'footer.copyright' | translate }} </span>
+    </div>
+  </div>
+</div>

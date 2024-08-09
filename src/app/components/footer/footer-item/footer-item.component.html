@@ -1,0 +1,13 @@
+@if (item) {
+  <div class="footerItem">
+    @if (item.image) {
+      <img class="img-item" [src]="item.image.url" [alt]="item.image.alt">
+    } @else if (item.text) {
+      <a class="item" [routerLink]="item.text.relativePath">{{ item.text.caption | translate }}</a>
+    } @else if (item.icon) {
+      <a class="icon" [href]="item.icon.url" target="_blank">
+        <i class="{{item.icon.className}}"></i>
+      </a>
+    }
+  </div>
+}
